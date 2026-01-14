@@ -31,7 +31,7 @@ export default function AllProjects({ darkMode }: AllProjectsProps) {
       {/* Heading and Back Button */}
       <div className="flex items-center gap-4 w-full max-w-6xl z-10 mb-6">
         <button
-          onClick={() => navigate('/My-Portfolio')}
+          onClick={() => navigate('/')}
           className="flex items-center gap-2 px-3 py-1 rounded-lg transition-colors cursor-pointer"
           style={{
             backgroundColor: glassyBg,
