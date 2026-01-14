@@ -9,7 +9,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<MainPage/>}/>
+        <Route path='/My-Portfolio' element={<MainPage/>}/>
         <Route path='/projects' element={<AllProjects darkMode={false}/>}/>
       </Routes>
     </BrowserRouter>
