@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=League+Spartan:wght@700&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+
+/* Headings (H1, H2, H3) */
+.font-heading {
+  font-family: 'Anton', 'Bebas Neue', 'League Spartan', sans-serif;
+}
+
+/* Body text */
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Buttons / UI Labels */
+.font-button {
+  font-family: 'Barlow Condensed', 'Inter', sans-serif;
+}
