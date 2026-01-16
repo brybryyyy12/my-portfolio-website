@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { FaRobot, FaTimes } from 'react-icons/fa';
 import myPfp from '../assets/mypfp.jpg'; // your image path
 
