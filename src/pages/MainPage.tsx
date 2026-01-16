@@ -21,8 +21,8 @@ export default function MainPage() {
       <Projects darkMode={darkMode} />
       <Certifications darkMode={darkMode} />
       <Contacts darkMode={darkMode} />
-      <AIassistant darkMode={darkMode} />
       <Footer darkMode={darkMode} />
+      <AIassistant darkMode={darkMode} />
 
     </div>
   );
