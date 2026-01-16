@@ -29,7 +29,7 @@ export default function AIassistant({ darkMode }: { darkMode: boolean }) {
     setLoading(true);
 
     try {
-      const response = await fetch("https://your-backend.up.railway.app/api/chat", {
+      const response = await fetch("https://my-portfolio-backend-production-8602.up.railway.app/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input })
