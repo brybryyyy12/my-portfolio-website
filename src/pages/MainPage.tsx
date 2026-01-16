@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Certifications from '../components/Certifications';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
+import AIassistant from '../components/AIassistant';
 
 export default function MainPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,6 +21,7 @@ export default function MainPage() {
       <Projects darkMode={darkMode} />
       <Certifications darkMode={darkMode} />
       <Contacts darkMode={darkMode} />
+      <AIassistant darkMode={darkMode} />
       <Footer darkMode={darkMode} />
 
     </div>
