@@ -21,12 +21,7 @@ export default function Certifications({ darkMode }: CertificationsProps) {
     backgroundColor: glassyBg,
     boxShadow: `6px 6px 0px 0px ${shadowColor}`,
   };
-  const certifications = [
-    {
-      id:1,
-      title: ""
-    }
-  ]
+
 
   return (
     <div className="w-full px-4 md:px-6 lg:px-8 py-4 md:py-6">
