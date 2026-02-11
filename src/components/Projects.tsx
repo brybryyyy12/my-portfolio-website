@@ -1,4 +1,4 @@
-import pfp from '../assets/pfp.jpg';
+import chatapp from '../assets/chatapp.png'
 import { useNavigate } from 'react-router-dom';
 
 interface ProjectsProps {
@@ -33,7 +33,7 @@ export default function Projects({ darkMode }: ProjectsProps) {
     {
       id:1,
       title: "Simple Chat App",
-      image: pfp,
+      image: chatapp,
       description: "This project is a real-time web-based chat application that allows users to send and receive messages instantly. It supports user authentication, real-time messaging using WebSockets, and persistent message storage in a database. The system enables seamless communication between users with a responsive and interactive interface.",
       techStack: ["React","Nodejs","MongoDB","TailwindCSS"],
       link: 'https://chat-app-clientside.vercel.app/homepage'
