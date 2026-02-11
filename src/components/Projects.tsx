@@ -6,6 +6,7 @@ interface ProjectsProps {
 }
 
 export default function Projects({ darkMode }: ProjectsProps) {
+  
   const navigate = useNavigate();
   const textColor = darkMode ? 'text-white' : 'text-black';
   const subTextColor = darkMode ? 'text-gray-300' : 'text-gray-700';
@@ -28,6 +29,16 @@ export default function Projects({ darkMode }: ProjectsProps) {
     ? 'hover:bg-white/80 hover:text-black'
     : 'hover:bg-black/50 hover:text-white';
 
+  const projects = [
+    {
+      id:1,
+      title: "Simple Chat App",
+      image: pfp,
+      description: "This project is a real-time web-based chat application that allows users to send and receive messages instantly. It supports user authentication, real-time messaging using WebSockets, and persistent message storage in a database. The system enables seamless communication between users with a responsive and interactive interface.",
+      techStack: ["React","Nodejs","MongoDB","TailwindCSS"],
+      link: 'https://chat-app-clientside.vercel.app/homepage'
+    }
+  ]
   return (
     <div className="w-full px-4 md:px-6 lg:px-8 py-4 md:py-6">
       <div className="w-full flex justify-center">
@@ -48,46 +59,52 @@ export default function Projects({ darkMode }: ProjectsProps) {
 
           {/* Projects List */}
           <div className="flex flex-col gap-4 md:gap-6">
-            {[1, 2].map(i => (
-              <div
-                key={i}
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full transition-transform duration-300 hover:-translate-y-2 p-3 md:p-4"
-                style={glassyStyle}
+                style={{ ...glassyStyle, cursor: "pointer" }}
               >
-                {/* Image - Responsive sizing */}
+                {/* Image */}
                 <div className="w-full sm:w-40 md:w-48 lg:w-56 h-48 sm:h-auto flex-shrink-0 overflow-hidden rounded-lg">
-                  <img 
-                    src={pfp} 
-                    alt={`Project ${i}`} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                
-                {/* Info - Responsive text and spacing */}
+
+                {/* Info */}
                 <div className="flex flex-col justify-between p-1 md:p-2 w-full">
                   <div className="mb-2 md:mb-3">
                     <h3 className={`font-heading text-lg md:text-xl lg:text-2xl ${textColor} mb-1 md:mb-2`}>
-                      Project Title {i}
+                      {project.title}
                     </h3>
                     <p className={`font-body ${subTextColor} text-sm md:text-base`}>
-                      [Short description placeholder] This is a brief description of what this project does and the technologies used. It should be concise but informative.
+                      {project.description}
                     </p>
                   </div>
-                  
-                  {/* Tech tags - Responsive */}
+
+                  {/* Tech Tags */}
                   <div className="flex flex-wrap gap-2 mt-2 md:mt-3">
-                    {['React', 'Node.js', 'MongoDB', 'Tailwind'].map((tech, idx) => (
+                    {project.techStack.map((techStack, idx) => (
                       <span
                         key={idx}
-                        className={`text-xs md:text-sm px-2 py-1 rounded border ${darkMode ? 'border-white/30 bg-white/10' : 'border-black/30 bg-black/10'} ${textColor}`}
+                        className={`text-xs md:text-sm px-2 py-1 rounded border ${
+                          darkMode ? "border-white/30 bg-white/10" : "border-black/30 bg-black/10"
+                        } ${textColor}`}
                       >
-                        {tech}
+                        {techStack}
                       </span>
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
+
           </div>
 
 
